@@ -51,24 +51,6 @@ variable "password_length" {
   default     = 20
 }
 
-variable "upload_iam_user_ssh_key" {
-  description = "Whether to upload a public ssh key to the IAM user"
-  type        = bool
-  default     = false
-}
-
-variable "ssh_key_encoding" {
-  description = "Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use SSH. To retrieve the public key in PEM format, use PEM"
-  type        = string
-  default     = "SSH"
-}
-
-variable "ssh_public_key" {
-  description = "The SSH public key. The public key must be encoded in ssh-rsa format or PEM format"
-  type        = string
-  default     = ""
-}
-
 variable "permissions_boundary" {
   description = "The ARN of the policy that is used to set the permissions boundary for the user."
   type        = string
